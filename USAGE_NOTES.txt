@@ -1,0 +1,7 @@
+Usage notes & tips
+
+- Data quality: Ensure your issues CSV has columns: title, body, labels.
+- Label normalisation: The pipeline maps many label names to canonical classes; edit normalize_label in src/issue_pipeline.py to match your project's labels.
+- For very small datasets, prefer manual rule-based triage or augment with external issue datasets.
+- To integrate as a GitHub Action: create an action that runs prediction on new issues and posts a comment with suggested labels (always require human approval).
+- Selenium scripts are optional and potentially brittle due to UI changes; use GitHub API for robust automation.
